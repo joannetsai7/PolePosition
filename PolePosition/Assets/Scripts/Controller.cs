@@ -5,24 +5,17 @@ using UnityEngine;
 public class Controller : MonoBehaviour {
 
 	// Use this for initialization
-<<<<<<< HEAD
-=======
 	public float movementForce;
 	public float topSpeed;
 	public float topTurnSpeed;
 	public float turnForce;
 	Rigidbody rb;
-
->>>>>>> origin/master
 	void Start () {
-		
+		rb = GetComponent<Rigidbody> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD
-		
-=======
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
 			if (rb.velocity.magnitude < topSpeed) {
@@ -50,6 +43,5 @@ public class Controller : MonoBehaviour {
 				rb.AddTorque (turnForce * Vector3.up * Time.deltaTime);
 			}
 		}
->>>>>>> origin/master
 	}
 }
