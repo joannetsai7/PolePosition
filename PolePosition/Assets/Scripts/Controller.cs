@@ -9,6 +9,8 @@ public class Controller : MonoBehaviour {
 	public float topSpeed;
 	public float topTurnSpeed;
 	public float turnForce;
+	float acceleratorVar = 5e+07f;
+	public bool highGear = false;
 	Rigidbody rb;
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
@@ -16,18 +18,18 @@ public class Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		rb.AddForce (movementForce * transform.forward * Time.deltaTime);
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
-			if (rb.velocity.magnitude < topSpeed) {
-				rb.AddForce (movementForce * transform.forward * Time.deltaTime);
+			StopCoroutine ("Decelerate");
+			//if (rb.velocity.magnitude < topSpeed) {
+			//}
+			if (movementForce < topSpeed) {
+				movementForce += acceleratorVar * Time.deltaTime;
 			}
 		}
-
-		if(Input.GetKey(KeyCode.DownArrow))
-		{
-			if (rb.velocity.magnitude > 0) {
-				rb.AddForce (movementForce * -transform.forward * Time.deltaTime);
-			}
+		if (Input.GetKeyUp (KeyCode.UpArrow)) {
+			StartCoroutine ("Decelerate");
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) 
@@ -42,6 +44,24 @@ public class Controller : MonoBehaviour {
 			if (rb.angularVelocity.magnitude < topTurnSpeed) {
 				rb.AddTorque (turnForce * Vector3.up * Time.deltaTime);
 			}
+		}
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			if (highGear) {
+				highGear = false;
+				topSpeed -= 2e+08f;
+				acceleratorVar += 2e+07f;
+			} else {
+				highGear = true;
+				topSpeed += 2e+08f;
+				acceleratorVar -= 2e+07f;
+			}
+		}
+	}
+	IEnumerator Decelerate()
+	{
+		for (float f = movementForce; f > 0; f -= acceleratorVar * Time.deltaTime) {
+			movementForce = f;
+			yield return new WaitForSeconds(.002f);
 		}
 	}
 }
