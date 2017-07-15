@@ -1,0 +1,22 @@
+print "Starting maya loading and fbx conversion \n";
+	
+if (`file -q -exists "/Users/gwc/Desktop/PolePosition/PolePosition/Assets/Prefabs/Terrence_Shi_Ford.mb"`)
+{		
+	file -o "/Users/gwc/Desktop/PolePosition/PolePosition/Assets/Prefabs/Terrence_Shi_Ford.mb";
+	FBXExportEmbeddedTextures -v false;
+	// FBXExportHardEdges -v true;
+	FBXExportApplyConstantKeyReducer -v false;
+	FBXExportShowUI -v false;
+
+	print "Before fbx export\n";
+	FBXExport -f "/Users/gwc/Desktop/PolePosition/PolePosition/Temp/ExportedFBXFile.fbx";
+	print "after fbx export\n";
+}
+else
+	print "Could not open Maya file.";
+
+sysFile -delete "/Users/gwc/Desktop/PolePosition/PolePosition/Temp/CommandPipe";
+
+$donepipeKill = `fopen "/Users/gwc/Desktop/PolePosition/PolePosition/Temp/SyncPipeKill" "w"`;
+fwrite $donepipeKill "Done";
+fclose $donepipeKill;
