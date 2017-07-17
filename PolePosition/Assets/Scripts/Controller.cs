@@ -12,7 +12,9 @@ public class Controller : MonoBehaviour {
 	float acceleratorVar = 5e+07f;
 	public bool highGear = false;
 	Rigidbody rb;
-	void Start () {
+
+	IEnumerator Start () {
+		yield return new WaitForSeconds(3f); //For the countdown
 		rb = GetComponent<Rigidbody> ();
 	}
 	
