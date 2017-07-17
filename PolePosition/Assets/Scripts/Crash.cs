@@ -10,7 +10,7 @@ public class Crash : MonoBehaviour {
 	public GameObject camera;
 	// Use this for initialization
 	void Start () {
-		control = new Controller ();
+		control = GetComponent<Controller>;
 	}
 	
 	// Update is called once per frame
