@@ -1,8 +1,0 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/StartScreen.unity
-=======
-- path: Assets/Scenes/TestScene.unity
->>>>>>> origin/master
-  isLoaded: 1
-  isActive: 1
