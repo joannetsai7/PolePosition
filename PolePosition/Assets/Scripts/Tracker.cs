@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class Tracker : MonoBehaviour {
 
+	public Camera cam;
+	public RawImage topScoreLBL;
+	public RawImage scoreLBL;
+	public RawImage timerLBL;
+	public RawImage lapLBL;
+	public RawImage speedLBL;
 	public Text timer;
 	public Text distance;
 	public Text speed;
@@ -13,15 +19,18 @@ public class Tracker : MonoBehaviour {
 	public AudioSource source;
 	public AudioClip start;
 
+	private float height;
+	private float width;
 	private float sec;
 	private bool timerOn;
 	private Vector3 lastPosition;
 	private float distanceTravelled;
 	private float lapDistance;
 	private float velocity;
+
 	// Use this for initialization
 	IEnumerator Start () {
-//		countDown.GetComponent<UnityEngine.UI.Text> ().fontSize = 500;
+		Scale ();
 		countDown.GetComponent<UnityEngine.UI.Text> ().text = "3";
 		Debug.Log ("starting count down");
 		yield return new WaitForSeconds(1f);
@@ -59,5 +68,10 @@ public class Tracker : MonoBehaviour {
 		velocity /= 10;
 		speed.GetComponent<UnityEngine.UI.Text> ().text = (velocity).ToString () + " m/s";
 		lastPosition = transform.position;
+	}
+
+	void Scale () { //Reposition and scale UI
+		cam = GetComponent<Camera>();
+		topScoreLBL.transform.position = cam.ViewportToWorldPoint(new Vector3(1, 1, 0));
 	}
 }
