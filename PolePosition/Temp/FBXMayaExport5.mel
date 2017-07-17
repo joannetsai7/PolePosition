@@ -1,8 +1,8 @@
 print "Starting maya loading and fbx conversion \n";
 	
-if (`file -q -exists "/Users/gwc/Desktop/PolePosition/PolePosition/Assets/Prefabs/Terrence_Shi_Ford.mb"`)
+if (`file -q -exists "/Users/gwc/Desktop/PolePosition/PolePosition/Assets/modelT_noText.mb"`)
 {		
-	file -o "/Users/gwc/Desktop/PolePosition/PolePosition/Assets/Prefabs/Terrence_Shi_Ford.mb";
+	file -o "/Users/gwc/Desktop/PolePosition/PolePosition/Assets/modelT_noText.mb";
 	FBXExportEmbeddedTextures -v false;
 	// FBXExportHardEdges -v true;
 	FBXExportApplyConstantKeyReducer -v false;
