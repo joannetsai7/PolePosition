@@ -13,6 +13,7 @@ public class Controller : MonoBehaviour {
 	public bool highGear = false;
 	Rigidbody rb;
 
+
 	IEnumerator Start () {
 		yield return new WaitForSeconds(3f); //For the countdown
 		rb = GetComponent<Rigidbody> ();
@@ -21,7 +22,7 @@ public class Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		rb.AddForce (movementForce * transform.forward * Time.deltaTime);
-		if(Input.GetKey(KeyCode.UpArrow))
+		if(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
 		{
 			StopCoroutine ("Decelerate");
 			//if (rb.velocity.magnitude < topSpeed) {
@@ -30,18 +31,18 @@ public class Controller : MonoBehaviour {
 				movementForce += acceleratorVar * Time.deltaTime;
 			}
 		}
-		if (Input.GetKeyUp (KeyCode.UpArrow)) {
+		if (Input.GetKeyUp (KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W)) {
 			StartCoroutine ("Decelerate");
 		}
 
-		if (Input.GetKey (KeyCode.LeftArrow)) 
+		if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) 
 		{
 			if (rb.angularVelocity.magnitude < topTurnSpeed) {
 				rb.AddTorque (turnForce * Vector3.down * Time.deltaTime);
 			}
 		}
 
-		if (Input.GetKey (KeyCode.RightArrow)) 
+		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) 
 		{
 			if (rb.angularVelocity.magnitude < topTurnSpeed) {
 				rb.AddTorque (turnForce * Vector3.up * Time.deltaTime);
