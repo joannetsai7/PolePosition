@@ -10,7 +10,8 @@ public class Crash : MonoBehaviour {
 	public GameObject camera;
 	// Use this for initialization
 	void Start () {
-		control = GetComponent<Controller>;
+		control = new Controller();
+		control = GetComponent<Controller>();
 	}
 	
 	// Update is called once per frame
@@ -32,8 +33,8 @@ public class Crash : MonoBehaviour {
 		camera.transform.parent = this.transform;
 		transform.position = new Vector3(250, 0, 250);
 		gameObject.SetActive (true);
-		//camera.transform.rotation = transform.rotation;
-		//camera.transform.Rotate (new Vector3 (15, 0, 0));
+		camera.transform.rotation = transform.rotation;
+		camera.transform.Rotate (new Vector3 (15, 0, 0));
 		camera.transform.localPosition = /*transform.position + */new Vector3(0, 20, -30);
 		Debug.Log (camera.transform.position);
 	}
