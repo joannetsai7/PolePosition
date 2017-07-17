@@ -10,6 +10,8 @@ public class Tracker : MonoBehaviour {
 	public Text speed;
 	public Text countDown;
 	public float trackLength;
+	public AudioSource source;
+	public AudioClip start;
 
 	private float sec;
 	private bool timerOn;
@@ -19,10 +21,6 @@ public class Tracker : MonoBehaviour {
 	private float velocity;
 	// Use this for initialization
 	IEnumerator Start () {
-		timerOn = true;
-		sec = 0;
-		lastPosition = transform.position;
-		distanceTravelled = 0;
 //		countDown.GetComponent<UnityEngine.UI.Text> ().fontSize = 500;
 		countDown.GetComponent<UnityEngine.UI.Text> ().text = "3";
 		Debug.Log ("starting count down");
@@ -32,6 +30,12 @@ public class Tracker : MonoBehaviour {
 		countDown.GetComponent<UnityEngine.UI.Text> ().text = "1";
 		yield return new WaitForSeconds(1f);
 		countDown.GetComponent<UnityEngine.UI.Text> ().text = "";
+		timerOn = true;
+		sec = 0;
+		lastPosition = transform.position;
+		distanceTravelled = 0;
+		source = GetComponent<AudioSource>();
+		source.PlayOneShot(start,0.9F);
 	}
 	
 	// Update is called once per frame
