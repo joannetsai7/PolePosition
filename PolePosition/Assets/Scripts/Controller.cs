@@ -29,9 +29,11 @@ public class Controller : MonoBehaviour {
 			//}
 			if (movementForce < topSpeed) {
 				movementForce += acceleratorVar * Time.deltaTime;
+			} else {
+				movementForce -= acceleratorVar * Time.deltaTime;
 			}
 		}
-		if (Input.GetKeyUp (KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W)) {
+		if (!Input.GetKey (KeyCode.UpArrow) || !Input.GetKey(KeyCode.W)) {
 			StartCoroutine ("Decelerate");
 		}
 
