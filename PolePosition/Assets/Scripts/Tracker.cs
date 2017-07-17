@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Tracker : MonoBehaviour {
-
-	public Camera cam;
+	
 	public RawImage topScoreLBL;
 	public RawImage scoreLBL;
 	public RawImage timerLBL;
@@ -30,7 +29,6 @@ public class Tracker : MonoBehaviour {
 
 	// Use this for initialization
 	IEnumerator Start () {
-		Scale ();
 		countDown.GetComponent<UnityEngine.UI.Text> ().text = "3";
 		Debug.Log ("starting count down");
 		yield return new WaitForSeconds(1f);
@@ -70,8 +68,4 @@ public class Tracker : MonoBehaviour {
 		lastPosition = transform.position;
 	}
 
-	void Scale () { //Reposition and scale UI
-		cam = GetComponent<Camera>();
-		topScoreLBL.transform.position = cam.ViewportToWorldPoint(new Vector3(1, 1, 0));
-	}
 }
