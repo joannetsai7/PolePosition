@@ -6,12 +6,12 @@ public class Crash : MonoBehaviour {
 
 	public ParticleSystem carExplosion;
 	//public GameObject car;
-//	private Controller control;
+	private Controller control;
 	public GameObject camera;
 	// Use this for initialization
 	void Start () {
-//		control = new Controller();
-//		control = GetComponent<Controller>();
+		control = new Controller();
+		control = GetComponent<Controller>();
 	}
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class Crash : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		Instantiate(carExplosion, transform.position, transform.rotation);
-//		control.movementForce = 0;
+		control.movementForce = 0;
 		camera.transform.parent = null;
 		gameObject.SetActive(false);
 		Invoke("Respawn", 1f);

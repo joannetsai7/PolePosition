@@ -16,3 +16,17 @@ C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEn
 C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEditor.xml
 C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\obj\Debug\Assembly-CSharp.dll
 C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\obj\Debug\Assembly-CSharp.pdb
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\nunit.framework.dll
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.Analytics.dll
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.HoloLens.dll
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.Networking.dll
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.TestRunner.dll
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.VR.dll
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.UI.xml
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.TestRunner.xml
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\nunit.framework.xml
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.Analytics.xml
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.HoloLens.xml
+C:\Users\garve\Documents\GitHub\PolePosition\PolePosition\Temp\bin\Debug\UnityEngine.VR.xml
