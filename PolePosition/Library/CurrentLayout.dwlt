@@ -111,7 +111,11 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 9
+=======
+  controlID: 4799
+>>>>>>> origin/master
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +139,11 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 10
+=======
+  controlID: 4800
+>>>>>>> origin/master
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -288,14 +296,24 @@ MonoBehaviour:
     width: 562
     height: 294
   m_SceneLighting: 1
+<<<<<<< HEAD
   lastFramingTime: 151.13389801979065
+=======
+  lastFramingTime: 798.9503797335411
+>>>>>>> origin/master
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 45.525826, y: 34.772644, z: 12.881695}
     speed: 2
     m_Value: {x: 45.525826, y: 34.772644, z: 12.881695}
+=======
+    m_Target: {x: 52.770535, y: -32.788574, z: 230.5206}
+    speed: 2
+    m_Value: {x: 52.770535, y: -32.788574, z: 230.5206}
+>>>>>>> origin/master
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -318,6 +336,7 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0.0563121, y: 0.9428919, z: -0.21134406, w: 0.25123078}
     speed: 2
     m_Value: {x: 0.056312118, y: 0.94289225, z: -0.21134414, w: 0.25123087}
@@ -325,6 +344,15 @@ MonoBehaviour:
     m_Target: 459.9082
     speed: 2
     m_Value: 459.9082
+=======
+    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+    speed: 2
+    m_Value: {x: -0.7071068, y: -0, z: 0, w: -0.7071068}
+  m_Size:
+    m_Target: 1120.6697
+    speed: 2
+    m_Value: 1120.6697
+>>>>>>> origin/master
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -439,9 +467,15 @@ MonoBehaviour:
     height: 611
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: cc2a0000
     m_LastClickedID: 0
     m_ExpandedIDs: 6e23fffff623ffff7024ffff8624ffffe4fbffffe6fbffff00000000
+=======
+    m_SelectedIDs: e62b0000
+    m_LastClickedID: 11238
+    m_ExpandedIDs: 4cedffffe8fbffff00000000e62b0000462c0000
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,19 +535,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets/Prefabs/Models
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Prefabs/Models
+=======
+    - Assets/Prefabs
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Prefabs
+>>>>>>> origin/master
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/gwc/Desktop/NHSGA/Programming/PolePosition/PolePosition
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: cc2a0000
     m_LastClickedID: 10956
     m_ExpandedIDs: 00000000ba2400004827000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: 6a280000
+    m_LastClickedID: 10346
+    m_ExpandedIDs: 00000000ce2400007a250000582700006a280000b046000000ca9a3bffffff7f
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -541,7 +589,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000ba240000
+=======
+    m_ExpandedIDs: 00000000ce2400007a250000582700006a280000b046000000ca9a3bffffff7f
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -569,7 +621,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
+<<<<<<< HEAD
     m_ExpandedInstanceIDs: f6510000
+=======
+    m_ExpandedInstanceIDs: 
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -618,11 +674,19 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1004
     y: 94
     width: 276
     height: 611
   m_ScrollPosition: {x: 0, y: 0}
+=======
+    x: 1132
+    y: 92
+    width: 404
+    height: 710
+  m_ScrollPosition: {x: 0, y: 211.27771}
+>>>>>>> origin/master
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: -160

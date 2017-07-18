@@ -9,6 +9,7 @@ public class Controller : MonoBehaviour {
 	public float topSpeed;
 	public float topTurnSpeed;
 	public float turnForce;
+	public GameObject grass;
 	public GameObject highImage;
 	public GameObject lowImage;
 	float acceleratorVar = 5e+07f;
@@ -22,6 +23,16 @@ public class Controller : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	void OnTriggerEnter (Collider other)
+	{
+		if (other = grass && movementForce > 2e+08) {
+			movementForce = 2e+08;
+			topSpeed -= 3e+08;
+		} else if (other = grass && movementForce < 2e+08) {
+			topSpeed -= 3e+08;
+		}
+			
+	}
 	void Update () {
 		rb.AddForce (movementForce * transform.forward * Time.deltaTime);
 		if(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
@@ -70,7 +81,7 @@ public class Controller : MonoBehaviour {
 	}
 	IEnumerator Decelerate()
 	{
-		for (float f = movementForce; f > 0; f -= acceleratorVar * Time.deltaTime) {
+		for (float f = movementForce; f > 0; f -= acceleratorVar * 3 * Time.deltaTime) {
 			movementForce = f;
 			yield return new WaitForSeconds(.002f);
 		}

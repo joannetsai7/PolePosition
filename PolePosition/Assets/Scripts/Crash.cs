@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Crash : MonoBehaviour {
 
-	public ParticleSystem carExplosion;
+	public GameObject carExplosion;
+	public GameObject grass;
 	//public GameObject car;
 	private Controller control;
 	private Collider collide;
@@ -33,7 +34,7 @@ public class Crash : MonoBehaviour {
 	{
 		//Instantiate (car, new Vector3(250, 0, 250), transform.rotation);
 		camera.transform.parent = this.transform;
-		transform.position = collide.transform.position + collide.transform.forward*30;
+		transform.position = collide.transform.position + collide.transform.right*30;
 		transform.position = new Vector3(transform.position.x,-2,transform.position.z);
 		gameObject.SetActive (true);
 		camera.transform.rotation = transform.rotation;
