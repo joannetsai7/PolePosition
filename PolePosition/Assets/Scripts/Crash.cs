@@ -31,11 +31,11 @@ public class Crash : MonoBehaviour {
 	{
 		//Instantiate (car, new Vector3(250, 0, 250), transform.rotation);
 		camera.transform.parent = this.transform;
-		transform.position = new Vector3(250, -3, 250);
+		transform.position = new Vector3(250, 0, 250);
 		gameObject.SetActive (true);
 		camera.transform.rotation = transform.rotation;
 		camera.transform.Rotate (new Vector3 (15, 0, 0));
-		camera.transform.localPosition = /*transform.position + */new Vector3(0, 12, -14);
+		camera.transform.localPosition = /*transform.position + */new Vector3(0, 11, -20);
 		Debug.Log (camera.transform.position);
 	}
 }

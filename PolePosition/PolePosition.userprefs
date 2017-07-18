@@ -4,8 +4,8 @@
     <Files>
       <File FileName="Assets\Scripts\CameraPan.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tracker.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Crash.cs" Line="38" Column="83" />
       <File FileName="Assets\Scripts\Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Crash.cs" Line="13" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
