@@ -9,8 +9,6 @@ public class Controller : MonoBehaviour {
 	public float topSpeed;
 	public float topTurnSpeed;
 	public float turnForce;
-	public GameObject highImage;
-	public GameObject lowImage;
 	float acceleratorVar = 5e+07f;
 	public bool highGear = false;
 	Rigidbody rb;
@@ -55,14 +53,10 @@ public class Controller : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			if (highGear) {
 				highGear = false;
-				highImage.SetActive (false);
-				lowImage.SetActive (true);
 				topSpeed -= 2e+08f;
 				acceleratorVar += 2e+07f;
 			} else {
 				highGear = true;
-				lowImage.SetActive (false);
-				highImage.SetActive (true);
 				topSpeed += 2e+08f;
 				acceleratorVar -= 2e+07f;
 			}
