@@ -35,7 +35,7 @@ public class Crash : MonoBehaviour {
 		gameObject.SetActive (true);
 		camera.transform.rotation = transform.rotation;
 		camera.transform.Rotate (new Vector3 (15, 0, 0));
-		camera.transform.localPosition = /*transform.position + */new Vector3(0, 20, -30);
+		camera.transform.localPosition = /*transform.position + */new Vector3(0, 11, -20);
 		Debug.Log (camera.transform.position);
 	}
 }
